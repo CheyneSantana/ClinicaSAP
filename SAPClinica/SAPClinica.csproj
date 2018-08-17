@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A181D038-F5BA-4148-A36E-1D8EB42C5617}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAPClinica</RootNamespace>
+    <AssemblyName>SAPClinica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.0-beta2\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.0-beta2\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.0-beta2\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.0-beta2\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.0-beta2\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.0-beta2\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.10\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Fabric.6.9.10\lib\net45\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Web.6.9.10\lib\net45\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1-beta3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4-preview1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4-preview1\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4-preview1\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4-preview1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4-preview1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4-preview1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Command\CoViking.cs" />
+    <Compile Include="Command\ICoViking.cs" />
+    <Compile Include="Command\IVikingRepository.cs" />
+    <Compile Include="Command\MessageErro.cs" />
+    <Compile Include="Command\VikingsContext.cs" />
+    <Compile Include="Command\VikingsRepository.cs" />
+    <Compile Include="Controllers\Application\VikingsController.cs" />
+    <Compile Include="Controllers\SAP\Consultas\ConsultaController.cs" />
+    <Compile Include="Controllers\SAP\Praja\PrajaController.cs" />
+    <Compile Include="Controllers\SAP\Home\HomeController.cs" />
+    <Compile Include="Controllers\SAP\NossaEquipe\NossaEquipeController.cs" />
+    <Compile Include="Controllers\SAP\Servicos\ServicosController.cs" />
+    <Compile Include="Controllers\SAP\Parceiros\ParceirosController.cs" />
+    <Compile Include="Controllers\SAP\PergunteEspecialista\PergunteEspecialistaController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SAP\NossaEquipe\Medicos.cs" />
+    <Compile Include="Models\SAP\NossaEquipe\MedicosRepository.cs" />
+    <Compile Include="Models\SAP\NossaEquipe\TipoDocumentoMedico.cs" />
+    <Compile Include="Models\SAP\NossaEquipe\TipoDocumentoMedicoRepository.cs" />
+    <Compile Include="Models\SAP\PergunteEspecialista\EnvioDTO.cs" />
+    <Compile Include="Models\SAP\Praja\PrajaDTO.cs" />
+    <Compile Include="Models\SAP\Servicos\Servicos.cs" />
+    <Compile Include="Models\SAP\Servicos\ServicosDTO.cs" />
+    <Compile Include="Models\SAP\Servicos\ServicosRepository.cs" />
+    <Compile Include="Models\SAP\Servicos\Especialidade.cs" />
+    <Compile Include="Models\SAP\Servicos\EspecialidadeRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SAP\PergunteEspecialista\EnviarEmail.cs" />
+    <Compile Include="Services\SAP\PergunteEspecialista\FindServicosPergunte.cs" />
+    <Compile Include="Services\SAP\Praja\EnviarCadastroPraja.cs" />
+    <Compile Include="Services\SAP\Praja\PrajaService.cs" />
+    <Compile Include="Services\SAP\Servicos\FindEspecialidade.cs" />
+    <Compile Include="Services\SAP\Servicos\ServicosService.cs" />
+    <Compile Include="Services\SAP\PergunteEspecialista\PergunteEspecialistaService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build\loading-bar.css" />
+    <Content Include="build\loading-bar.js" />
+    <Content Include="build\loading-bar.min.css" />
+    <Content Include="build\loading-bar.min.js" />
+    <Content Include="Content\angular-toastr.css" />
+    <Content Include="Content\angular-toastr.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\clean-blog.css" />
+    <Content Include="Content\clean-blog.min.css" />
+    <Content Include="Content\ClinicaSAP.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="img\Home\slide1.jpg" />
+    <Content Include="img\Home\slide10.jpg" />
+    <Content Include="img\Home\slide11.jpg" />
+    <Content Include="img\Home\slide12.jpg" />
+    <Content Include="img\Home\slide13.jpg" />
+    <Content Include="img\Home\slide2.jpg" />
+    <Content Include="img\Home\slide3.jpg" />
+    <Content Include="img\Home\slide4.jpg" />
+    <Content Include="img\Home\slide5.jpg" />
+    <Content Include="img\Home\slide6.jpg" />
+    <Content Include="img\Home\slide7.jpg" />
+    <Content Include="img\Home\slide8.jpg" />
+    <Content Include="img\Home\slide9.jpg" />
+    <Content Include="img\logo.ico" />
+    <Content Include="img\Parceiros\logoLabGonzaga.JPG" />
+    <Content Include="img\Parceiros\logoZnPharma.jpg" />
+    <Content Include="img\praja\passos.jpg" />
+    <Content Include="img\praja\topo.jpg" />
+    <Content Include="img\Servicos\Especialidades\Acupuntura.png" />
+    <Content Include="img\Servicos\Especialidades\Clinico Geral.png" />
+    <Content Include="img\Servicos\Especialidades\Dermatologista.png" />
+    <Content Include="img\Servicos\Especialidades\Endocrinologista.png" />
+    <Content Include="img\Servicos\Especialidades\Estética.png" />
+    <Content Include="img\Servicos\Especialidades\Fisioterapia.png" />
+    <Content Include="img\Servicos\Especialidades\Massagem - Drenagem.png" />
+    <Content Include="img\Servicos\Especialidades\Nutrição.png" />
+    <Content Include="img\Servicos\Especialidades\Otorrino.png" />
+    <Content Include="img\Servicos\Especialidades\Psicoterapias.png" />
+    <Content Include="img\Servicos\Especialidades\Psicologia.png" />
+    <Content Include="img\Servicos\Especialidades\Psiquiatria.png" />
+    <Content Include="img\Servicos\Especialidades\Urologista.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\btn-bg.jpg" />
+    <Content Include="img\construcao.png" />
+    <Content Include="img\em_desenvolvimento.png" />
+    <Content Include="img\Servicos\Estética.png" />
+    <Content Include="img\Servicos\Fisioterapia.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\item1.jpg" />
+    <Content Include="img\item2.jpg" />
+    <Content Include="img\item3.jpg" />
+    <Content Include="img\Servicos\Medicos\0001.jpg" />
+    <Content Include="img\Servicos\Medicos\0002.jpg" />
+    <Content Include="img\Servicos\Medicos\06101349.jpg" />
+    <Content Include="img\Servicos\Medicos\06131124.jpg" />
+    <Content Include="img\Servicos\Medicos\111011SP.jpg" />
+    <Content Include="img\Servicos\Medicos\16482.jpg" />
+    <Content Include="img\Servicos\Medicos\195587F.jpg" />
+    <Content Include="img\Servicos\Medicos\3109216F.jpg" />
+    <Content Include="img\Servicos\Medicos\3231421F.jpg" />
+    <Content Include="img\Servicos\Medicos\36913109822.jpg" />
+    <Content Include="img\Servicos\Medicos\37741220837.jpg" />
+    <Content Include="img\Servicos\Medicos\46917.jpg" />
+    <Content Include="img\Servicos\Medicos\bruno lamoglia-01.jpg" />
+    <Content Include="img\Servicos\Médicos.png" />
+    <Content Include="img\Servicos\Nutrição.png" />
+    <Content Include="img\Servicos\Especialidades\Cardiologista.png" />
+    <Content Include="img\Servicos\Especialidades\Geriatria.png" />
+    <Content Include="img\Servicos\Especialidades\Ginecologista.png" />
+    <Content Include="img\Servicos\Especialidades\Hipnose.png" />
+    <Content Include="img\Servicos\Especialidades\Medicina Esportiva.png" />
+    <Content Include="img\Servicos\Especialidades\Pediatria.png" />
+    <Content Include="img\pattern.jpg" />
+    <Content Include="img\Servicos\Psicólogos.png" />
+    <Content Include="img\VIKINGS-2.jpg" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="less\animated.less" />
+    <Content Include="less\bordered-pulled.less" />
+    <Content Include="less\core.less" />
+    <Content Include="less\fixed-width.less" />
+    <Content Include="less\font-awesome.less" />
+    <Content Include="less\icons.less" />
+    <Content Include="less\larger.less" />
+    <Content Include="less\list.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\path.less" />
+    <Content Include="less\rotated-flipped.less" />
+    <Content Include="less\screen-reader.less" />
+    <Content Include="less\stacked.less" />
+    <Content Include="less\variables.less" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\FileAPI.flash.swf" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\FileAPI.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\FileAPI.min.js" />
+    <Content Include="Scripts\js\SAP\Servicos\ServicosMobileController.js" />
+    <Content Include="Scripts\lib\secondary\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\lib\secondary\bootstrap\bootstrap.min.js" />
+    <None Include="Scripts\lib\primary\jquery\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery-3.3.1.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\lib\primary\jquery\jquery-3.3.1.min.map" />
+    <None Include="Scripts\lib\primary\jquery\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery.validate.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery.validate.min.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\lib\primary\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\app\app.js" />
+    <Content Include="Scripts\js\app\config\HttpConfig.js" />
+    <Content Include="Scripts\js\app\factory\MessageErroInterceptor.js" />
+    <Content Include="Scripts\js\app\service\UtilityService.js" />
+    <Content Include="Scripts\js\SAP\Consultas\ConsultasController.js" />
+    <Content Include="Scripts\js\SAP\Consultas\ConsultasService.js" />
+    <Content Include="Scripts\js\SAP\Praja\PrajaController.js" />
+    <Content Include="Scripts\js\SAP\Praja\PrajaService.js" />
+    <Content Include="Scripts\js\SAP\Home\HomeController.js" />
+    <Content Include="Scripts\js\SAP\Home\HomeService.js" />
+    <Content Include="Scripts\js\SAP\NossaEquipe\NossaEquipeController.js" />
+    <Content Include="Scripts\js\SAP\NossaEquipe\NossaEquipeService.js" />
+    <Content Include="Scripts\js\SAP\Servicos\ServicosController.js" />
+    <Content Include="Scripts\js\SAP\Servicos\ServicosService.js" />
+    <Content Include="Scripts\js\SAP\Servicos\EspecialidadeController.js" />
+    <Content Include="Scripts\js\SAP\Parceiros\ParceirosController.js" />
+    <Content Include="Scripts\js\SAP\Parceiros\ParceirosService.js" />
+    <Content Include="Scripts\js\SAP\PergunteEspecialista\PergunteEspecialistaController.js" />
+    <Content Include="Scripts\js\SAP\PergunteEspecialista\PergunteEspecialistaService.js" />
+    <Content Include="Scripts\lib\primary\angular\angular.js" />
+    <Content Include="Scripts\lib\primary\angular\angular.min.js" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Scripts\lib\secondary\plugins\ngmask\ngMask.js" />
+    <Content Include="Scripts\lib\secondary\plugins\ngmask\ngMask.min.js" />
+    <Content Include="Scripts\lib\secondary\plugins\toastr\toastr.config.js" />
+    <Content Include="Scripts\lib\secondary\plugins\toastr\toastr.js" />
+    <Content Include="Scripts\lib\secondary\modernizr-2.8.3.js" />
+    <Content Include="Scripts\lib\secondary\respond.js" />
+    <Content Include="Scripts\lib\secondary\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\lib\secondary\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\lib\secondary\respond.min.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\ng-file-upload-all.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\ng-file-upload-all.min.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\ng-file-upload-shim.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\ng-file-upload-shim.min.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\ng-file-upload.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-upload\ng-file-upload.min.js" />
+    <Content Include="Scripts\template\custom.js" />
+    <Content Include="Scripts\template\gmaps.js" />
+    <Content Include="Scripts\template\html5shiv.js" />
+    <Content Include="Scripts\template\smoothscroll.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\dist\angular-toastr.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\dist\angular-toastr.min.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\dist\angular-toastr.tpls.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\dist\angular-toastr.tpls.min.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\src\directives\progressbar\progressbar.directive.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\src\directives\progressbar\progressbar.html" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\src\directives\toast\toast.controller.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\src\directives\toast\toast.directive.js" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\src\directives\toast\toast.html" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\test\toastr_spec.js" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\SAP\Consultas\Consultas.cshtml" />
+    <Content Include="Views\SAP\Home\Index.cshtml" />
+    <Content Include="Views\SAP\NossaEquipe\NossaEquipe.cshtml" />
+    <Content Include="Views\SAP\Servicos\Servicos.cshtml" />
+    <Content Include="Views\SAP\Parceiros\Parceiros.cshtml" />
+    <Content Include="Views\SAP\PergunteEspecialista\PergunteAoEspecialista.cshtml" />
+    <Content Include="Scripts\lib\primary\angular\angular.min.js.map" />
+    <Content Include="Scripts\lib\secondary\plugins\ngmask\ngMask.min.map" />
+    <Content Include="scss\font-awesome.scss" />
+    <Content Include="scss\_animated.scss" />
+    <Content Include="scss\_bordered-pulled.scss" />
+    <Content Include="scss\_core.scss" />
+    <Content Include="scss\_fixed-width.scss" />
+    <Content Include="scss\_icons.scss" />
+    <Content Include="scss\_larger.scss" />
+    <Content Include="scss\_list.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_path.scss" />
+    <Content Include="scss\_rotated-flipped.scss" />
+    <Content Include="scss\_screen-reader.scss" />
+    <Content Include="scss\_stacked.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\config\testem.json" />
+    <Content Include="Scripts\lib\secondary\plugins\angular-toastr\src\toastr.less" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="vendor\font-awesome\less\animated.less" />
+    <Content Include="vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="vendor\font-awesome\less\core.less" />
+    <Content Include="vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="vendor\font-awesome\less\icons.less" />
+    <Content Include="vendor\font-awesome\less\larger.less" />
+    <Content Include="vendor\font-awesome\less\list.less" />
+    <Content Include="vendor\font-awesome\less\mixins.less" />
+    <Content Include="vendor\font-awesome\less\path.less" />
+    <Content Include="vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="vendor\font-awesome\less\stacked.less" />
+    <Content Include="vendor\font-awesome\less\variables.less" />
+    <Content Include="vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="vendor\font-awesome\scss\_core.scss" />
+    <Content Include="vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="vendor\font-awesome\scss\_list.scss" />
+    <Content Include="vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="vendor\font-awesome\scss\_path.scss" />
+    <Content Include="vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Views\SAP\Servicos\Especialidades.cshtml" />
+    <Content Include="Views\SAP\Servicos\ServicosMobile.cshtml" />
+    <Content Include="Views\SAP\Praja\Praja.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54613</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54613/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

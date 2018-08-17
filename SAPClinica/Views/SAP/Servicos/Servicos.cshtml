@@ -1,0 +1,67 @@
+﻿<!-- service section starts here -->
+<div class="row" ng-controller="ServicosController as servicos" style="padding-top: 20px;">
+    <section class="service text-center" id="service">
+        <div class="container">
+            <div class="row">
+                <h2>NOSSOS SERVIÇOS</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-2 div-servico" ng-repeat="servico in servicos.Servicos">
+                        <div class="row">
+                            <button class="btn btn-link" ng-click="servicos.findEspecialidades(servico.SERVICOID)">
+                                <img class="img-icone" src="~/img/Servicos/{{servico.NOMESERVICO}}.png" />
+                            </button>
+                            <div class="row">
+                                <h3 class="h3-service">{{servico.NOMESERVICO}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div id="especialidades" ng-show="servicos.hasEspecialidades">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <div class="col-sm-2 col-lg-3 panel-group" id="accordion" ng-repeat="option in servicos.ServicosDTO.ESPECIALIDADES">
+                        <button class="btn btn-link" ng-click="servicos.MostrarMedicos(option.NOMEESPECIALIDADE, option.MEDICOS)">
+                            <img class="img-especialidade" src="~/img/Servicos/Especialidades/{{option.NOMEESPECIALIDADE}}.png" alt="{{option.NOMEESPECIALIDADE}}" />
+                        </button>
+                        <div class="row">
+                            <h3 class="h3-service">{{option.NOMEESPECIALIDADE}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="medicos" ng-show="servicos.showMedicos">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="col-md-2 col-lg-2">
+                        <button class="btn btn-link" ng-click="servicos.MostrarEspecialidades()">
+                            <img class="img-especialidade" src="~/img/Servicos/Especialidades/{{servicos.NomeEspecialidade}}.png" alt="{{servicos.NomeEspecialidade}}" />
+                        </button>
+                        <div class="row">
+                            <h3 class="h3-service">{{servicos.NomeEspecialidade}}</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2 single-member col-sm-4" ng-repeat="medico in servicos.Medicos">
+                        <div class="person">
+                            <img class="img-responsive" src="~/img/Servicos/Medicos/{{medico.NRODOCUMENTO}}.jpg" alt="{{medico.NOMEMEDICO}}">
+                        </div>
+                        <div class="person-detail">
+                            <div class="arrow-bottom"></div>
+                            <h3>{{medico.NOMEMEDICO}}</h3>
+                            <p>
+                                {{medico.NOMEDOCUMENTO}}: {{medico.NRODOCUMENTO}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+<!-- end of service section -->

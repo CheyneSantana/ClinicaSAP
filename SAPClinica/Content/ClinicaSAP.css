@@ -1,0 +1,328 @@
+﻿.img-manutencao {
+    height: 500px;
+    margin-top: 105px;
+    margin-left: 200px;
+}
+
+.img-desenvolvimento {
+    width: 390px;
+    margin-left: 84px;
+}
+
+.text-consulta {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+}
+
+.h2-consulta {
+    font-size: 90px;
+    text-align: center;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.h2-contato {
+    font-size: 80px;
+    text-align: center;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.h2-especialista {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.email-especialista {
+    width: 512px;
+}
+
+.logo-vkings {
+    height: 100px;
+    padding-left: 580px;
+}
+
+.div-especialidade {
+    margin-left: 40%;
+}
+
+.div-index {
+    padding-top: 5px;
+}
+
+.btn-limpar {
+    width: 180px;
+    height: 50px;
+    font-family: 'BenchNine', sans-serif;
+}
+
+.form * {
+    border-radius: 0 !important;
+}
+
+.form > fieldset > legend {
+    font-size: 120%;
+}
+
+.praja-div {
+    margin-top: 100px;
+}
+
+.img-marcadagua {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.div-servico {
+    width: 220px;
+}
+
+.img-especialidade {
+    width: 130px;
+    background-color: transparent;
+}
+
+.img-icone {
+    width: 130px;
+}
+
+.h4-subservico {
+    font-size: 24px;
+    display: block;
+    color: black;
+}
+
+.img-praja-topo {
+    width: 90%;
+}
+
+.img-praja-passos {
+    width: 50%;
+}
+
+.praja-div p {
+    font-family: 'Capriola', sans-serif;
+    font-size: 15px;
+}
+
+.praja-div li {
+    font-family: 'Capriola', sans-serif;
+    font-size: 15px;
+    color: #666;
+}
+
+.praja-div h3 {
+    color: #00aba1;
+}
+
+.znpharma {
+    background-color: transparent;
+}
+
+.labgonzaga {
+    background-color: transparent;
+}
+
+.praja-div legend {
+    color: white;
+    font-size: 35px;
+}
+
+.praja-div label {
+    color: white;
+}
+
+.praja-div b {
+    color: #00aba1;
+}
+
+.div-texto-praja {
+    padding-left: 5%;
+    padding-right: 4%;
+}
+
+.div-insc-praja {
+    padding-left: 5%;
+    padding-right: 4%;
+}
+
+    .div-insc-praja form {
+        background: #00aba1;
+    }
+
+.parceiro-div {
+    padding-top: 6%;
+}
+
+    .parceiro-div h2 {
+        margin-left: 2%;
+        color: #00aba1;
+    }
+
+    .parceiro-div hr {
+        border-top: 2px solid #eee;
+        border-color: dimgray;
+    }
+
+.linha-vertical {
+    height: 100%;
+    border-left: 2px solid;
+    border-color: #00aba1;
+}
+
+.div-tipoparceiros {
+    height: 200px;
+}
+
+.img-slide{
+    width: 100%
+}
+
+/* Responsivo */
+@media (max-width: 479px) {
+    .header-logo {
+        height: 30px;
+    }
+
+    .img-header {
+        width: 150px;
+        padding-top: 25px;
+    }
+
+    .top-header {
+        height: 100px;
+    }
+
+    .team {
+        margin-top: 80px;
+        padding-top: 20px;
+    }
+
+    .img-manutencao {
+        height: 150px;
+        margin-top: 105px;
+        margin-left: 20px;
+    }
+
+    .img-desenvolvimento {
+        width: 240px;
+        margin-left: 5px;
+    }
+
+    .text-consulta {
+        font-size: 26px;
+    }
+
+    .h2-consulta {
+        font-size: 43px;
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    .h2-especialista {
+        font-size: 30px;
+        text-align: left;
+        margin-left: 15px;
+        color: #fff;
+    }
+
+    .h2-contato {
+        font-size: 37px;
+        margin-left: 3px;
+    }
+
+    .logo-vkings {
+        padding-left: 100px;
+    }
+
+    .img-servico-especialidade {
+        width: 150px;
+    }
+
+    .div-especialidade {
+        margin-left: 0px;
+    }
+
+    .img-especialidade {
+        /*margin-left: 43%;*/
+    }
+
+    .contact-form input.submit-btn,
+    .btn-limpar {
+        width: 100%;
+        background-repeat: repeat;
+    }
+
+    .div-servico {
+        margin-left: 15%;
+    }
+
+    .h3-service {
+        margin-left: auto;
+    }
+
+    .h3-especialidade {
+        font-weight: bolder;
+        font-family: Capriola;
+        color: #fff;
+        margin-top: 5px;
+    }
+
+    .panel-group {
+        margin-bottom: 0px;
+    }
+
+    .info-parceiro {
+        text-align: left;
+        margin-left: -25px;
+    }
+
+    .img-praja-topo {
+        height: 175px;
+        width: 100%;
+    }
+
+    .img-praja-passos {
+        width: 100%;
+    }
+
+    .div-texto-praja {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .div-insc-praja {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .praja-div li {
+        font-size: 12px;
+    }
+
+    .praja-div legend {
+        font-size: 25px;
+    }
+
+    .div-tipoparceiros {
+        height: auto;
+    }
+
+    .parceiro-div {
+        padding-top: 20%;
+    }
+
+        .parceiro-div h2 {
+            font-size: 20px;
+        }
+
+    .linha-vertical {
+        border-color: transparent;
+        border-left: 0px solid;
+    }
+
+
+}

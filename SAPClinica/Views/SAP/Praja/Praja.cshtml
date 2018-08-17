@@ -1,0 +1,138 @@
+﻿<div class="praja-div" ng-controller="PrajaController as praja">
+    <div class="row">
+        <div class="text-center">
+            <img class="img-praja-topo" src="~/img/praja/topo.jpg" />
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 div-texto-praja">
+            <p>
+                O <b>PRAjá</b> é um programa totalmente personalizado, onde o acompanhamento é modelado de acordo com o perfil e o desenvolvimento do paciente.<br />
+                Com a proposta de ser um projeto de reeducação de estilo de vida, atingimos seus objetivos através de um programa completo. O diferencial e nosso programa é você, pois o plano é elaborado conforme a sua demanda e disponibilidade.<br />
+            </p>
+            <div class="row">
+                <div class="col-4 col-sm-6">
+                    <div class="item">
+                        <h3><i class="fa fa-list"></i> Diferenciais</h3>
+                        <ul class="list-group">
+                            <li><i class="fa fa-check"></i> Planos individualizados, sem modelo pronto de mercado e nem dietas da moda;</li>
+                            <li><i class="fa fa-check"></i> Apoio total de um time multidisciplinar de profissionais da área da saúde;</li>
+                            <li><i class="fa fa-check"></i> Ampla variedade de serviços agregados para atingir seu objetivo;</li>
+                            <li><i class="fa fa-check"></i> Total integração de prontuário e avaliação evolutiva;</li>
+                            <li><i class="fa fa-check"></i> Planejamentos em ciclos curtos (mensal);</li>
+                            <li><i class="fa fa-check"></i> Apoio total em nutrição, suplementação e manipulação de fórmulas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-6">
+                    <div class="item">
+                        <h3><i class="fa fa-clock-o"></i> Duração média</h3>
+                        <ul class="list-group">
+                            <li><i class="fa fa-check"></i> 4 meses </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            @*<div class="row">
+                <p class="text-center">
+                    <b>
+                        Inscreva-se até dia 20/04 e concorra a um plano totalmente grátis. <br />
+                        Serão sorteadas duas pessoas para ganhar esse super tratamento sem nenhum custo adicional. <br />
+                        Para participar a regra é simples:<br />
+                        <br />
+                    </b>
+                </p>
+                <div class="row">
+                    <div class="col-12 col-sm-12 text-center">
+                        <div class="item">
+                            <ul class="list-group">
+                                <li><i class="fa fa-file"></i> Preencha o formulário abaixo;</li>
+                                <li><i class="fa fa-facebook"></i> Curta nossa página no <a target="_blank" href="https://facebook.com/sapclinica">facebook</a>;</li>
+                                <li><i class="fa fa-instagram"></i> Siga a clinica no <a target="_blank" href="https://www.instagram.com/clinicasap/">instagram</a>;</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="text-center">
+            <img class="img-praja-passos" src="~/img/praja/passos.jpg" />
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 div-insc-praja">
+            <form role="form">
+                <legend class="text-center">Faça a sua inscrição no programa</legend>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="form-group tex">
+                                <input id="nome" class="form-control" type="text" ng-model="praja.PrajaDTO.NOME" placeholder="Nome Completo" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input id="dtnascimento" class="form-control" type="text" mask="39/19/9999" ng-model="praja.PrajaDTO.DTNASCIMENTO" placeholder="Data de Nascimento" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input id="endereco" class="form-control" type="text" ng-model="praja.PrajaDTO.ENDERECO" placeholder="Endereço" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" type="email" ng-model="praja.PrajaDTO.EMAIL" placeholder="Email" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" type="tel" ng-model="praja.PrajaDTO.TELEFONE" placeholder="Telefone" mask="(99) 99999-9999" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" ng-model="praja.PrajaDTO.PERGUNTA" placeholder="Por que quer mudar seu estilo de vida?"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Enviar foto de corpo inteiro: </label>
+                                <input type="file" name="file" accept="image/*" ngf-max-size="5MB" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <button class="btn btn-success fa fa-address-card-o" ng-click="praja.Cadastrar()"> Cadastrar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <button class="btn btn-danger fa fa-trash-o" ng-click="praja.limparCampos()"> Limpar</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿<div class="row" ng-controller="EspecialidadeController as servicos" style="padding-top: 20px;">
+    <section class="service text-center">
+        <div class="row">
+            <div class="col-lg-12" ng-show="!servicos.showMedicos">
+                <div class="col-md-2 panel-group div-especialidade" id="accordion" ng-repeat="option in servicos.ServicosDTO.ESPECIALIDADES">
+                    <div class="row">
+                        <button class="btn btn-link" ng-click="servicos.MostrarMedicos(option.NOMEESPECIALIDADE, option.MEDICOS)">
+                            <img class="img-especialidade" src="~/img/Servicos/Especialidades/{{option.NOMEESPECIALIDADE}}.png" alt="{{option.NOMEESPECIALIDADE}}" />
+                            <h3 class="text-center h3-especialidade">{{option.NOMEESPECIALIDADE}}</h3>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-12 col-lg-12" ng-show="servicos.showMedicos">
+                <div class="col-md-2 col-lg-2 div-especialidade">
+                    <button class="btn btn-link" ng-click="servicos.MostrarEspecialidades()">
+                        <img class="img-especialidade" src="~/img/Servicos/Especialidades/{{servicos.NomeEspecialidade}}.png" alt="{{servicos.NomeEspecialidade}}" />
+                    </button>
+                    <div class="row">
+                        <h3 class="text-center h3-especialidade">{{servicos.NomeEspecialidade}}</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 single-member col-sm-4" ng-repeat="medico in servicos.Medicos">
+                    <div class="person">
+                        <img class="img-responsive" src="~/img/Servicos/Medicos/{{medico.NRODOCUMENTO}}.jpg" alt="{{medico.NOMEMEDICO}}">
+                    </div>
+                    <div class="person-detail">
+                        <div class="arrow-bottom"></div>
+                        <h3>{{medico.NOMEMEDICO}}</h3>
+                        <p>
+                            {{medico.NOMEDOCUMENTO}}: {{medico.NRODOCUMENTO}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,29 @@
+﻿<!-- contact section starts here -->
+<div class="row" ng-controller="PergunteEspecialistaController as pergunte" style="padding-top: 20px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="contact-caption clearfix">
+                <div class="contact-heading text-center">
+                    <h2 class="h2-especialista">Pergunte a um Especialista</h2>
+                </div>
+                <div class="col-md-8 col-md-offset-2 contact-form">
+                    <form class="form">
+                        <input class="name" type="text" placeholder="Nome do Paciente" ng-model="pergunte.EnvioDTO.NomePaciente" />
+                        <input class="email" type="email" placeholder="Email" ng-model="pergunte.EnvioDTO.Email">
+                        <input class="form-inline" type="datetime" placeholder="Data de Nascimento" ng-model="pergunte.EnvioDTO.DataNascimento" mask="39/19/9999" />
+                        <input class="phone" type="tel" placeholder="Telefone de Contato" ng-model="pergunte.EnvioDTO.Telefone" mask="(99)99999-9999" />
+                        <select class="form-control">
+                            <optgroup ng-repeat="servico in pergunte.ServicosDTO" label="{{servico.NOMESERVICO}}">
+                                <option ng-repeat="especialidade in servico.ESPECIALIDADES" ng-model-options="especialidade">{{especialidade.NOMEESPECIALIDADE}}</option>
+                            </optgroup>
+                        </select>
+                        <textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Pergunta" ng-model="pergunte.EnvioDTO.Texto" style="margin-top: 10px"></textarea>
+                        <input class="submit-btn" type="submit" value="Enviar" ng-click="pergunte.Enviar()">
+                        <button class="btn-limpar btn btn-info fa fa-trash" ng-click="pergunte.LimparCampos()"> Limpar campos</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of contact section -->

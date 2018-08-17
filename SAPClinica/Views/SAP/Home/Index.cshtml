@@ -1,0 +1,88 @@
+﻿<!-- home section -->
+<div class="row div-index" ng-controller="HomeController as home">
+    <section class="slider" id="Home">
+        <div class="row">
+            <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="header-backup"></div>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox" >
+                    <div class="item active">
+                        <a href="/Praja">
+                            <img class="img-slide" src="~/img/Home/slide1.jpg">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <img class="img-slide" src="~/img/Home/slide{{home.slideNumber}}.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <a target="_blank" href="http://blog.clinicasap.com.br/">
+                            <img class="img-slide" src="~/img/Home/slide2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- end of slider section -->
+    <!-- about section -->
+    <section class="about text-center" id="about">
+        <div class="container">
+            <div class="row">
+                <br />
+                <br />
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-about-detail clearfix">
+                        <div class="about-img">
+                            <img class="img-responsive" src="~/img/item1.jpg" alt="">
+                        </div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>S</h1>
+                            </div>
+                            <h3>SAÚDE</h3>
+                            <p>A Clinica SAP promove tratamentos multidisciplinares de maneira integrada visando oferecer conforto e bem estar aos seus pacientes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-about-detail">
+                        <div class="about-img">
+                            <img class="img-responsive" src="~/img/item2.jpg" alt="">
+                        </div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>A</h1>
+                            </div>
+                            <h3>ÁGIL</h3>
+                            <p>Agilidade para que você possa ter um tratamento assertivo e permita você conseguir aproveitar ao máximo sua vida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-about-detail">
+                        <div class="about-img">
+                            <img class="img-responsive" src="~/img/item3.jpg" alt="">
+                        </div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>P</h1>
+                            </div>
+                            <h3>POPULAR</h3>
+                            <p>Promover atendimento de saúde com qualidade impar e a um preço acessível é a missão da clinica.<br /><br /> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- end of about section -->
